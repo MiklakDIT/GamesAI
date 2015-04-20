@@ -5,14 +5,15 @@
 class Ship
 {
 public:
-	Ship(void);
+	Ship(string, string);
 	~Ship(void);
 	void loadModel(string path);
 	void draw();
 	void drawVec(string label, ofVec3f vec, int& y);
 	void move(float time);
 	void update(float time);
-	void seek(ofPoint target, float time);
+	bool seek(ofPoint target, float time);
+	bool sees(ofPoint target);
 	void seekRotate(ofVec3f target, float time);
 	ofQuaternion fromTwoVectors(ofVec3f origin, ofVec3f target);
 	vector<ofPoint> path;
@@ -20,7 +21,7 @@ public:
 
 	ofxAssimpModelLoader model;
 	ofTexture tex;
-	ofVec3f velocity, position, look, basicLook, force;
+	ofVec3f velocity, position, look, basicLook, force, target;
 	ofQuaternion rot;
 	float angular_velocity;
 

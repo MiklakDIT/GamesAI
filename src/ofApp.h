@@ -23,7 +23,7 @@ class ofApp : public ofBaseApp{
 
 		void seek(ofPoint, float);
 
-		Ship ship;
+		vector<shared_ptr<Ship>> ships;
 		float previous_time;
 		ofLight light;
 

@@ -1,9 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxAssimpModelLoader.h"
-#include "ofTexture.h"
 #include "ofLight.h"
+#include "ship.h"
 
 class ofApp : public ofBaseApp{
 
@@ -24,12 +23,8 @@ class ofApp : public ofBaseApp{
 
 		void seek(ofPoint, float);
 
-		ofxAssimpModelLoader model;
-		ofTexture tex;
+		Ship ship;
+		float previous_time;
 		ofLight light;
-		vector<ofPoint> path;
-		int current_point;
-		ofVec3f velocity;
-		double previous_time;
 
 };

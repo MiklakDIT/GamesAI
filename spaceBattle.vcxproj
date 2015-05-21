@@ -58,15 +58,16 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxFft\libs;..\..\..\addons\ofxFft\src;..\..\..\addons\ofxFft\libs\fftw;..\..\..\addons\ofxFft\libs\fftw\include;..\..\..\addons\ofxFft\libs\fftw\lib;..\..\..\addons\ofxFft\libs\fftw\lib\win32;..\..\..\addons\ofxFft\libs\kiss</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);ffmpeg\ffmpeg-win32-dev\include;ffmpeg\include;..\..\..\addons\ofxBullet\src;..\..\..\addons\ofxBullet\src\events;..\..\..\addons\ofxBullet\src\joints;..\..\..\addons\ofxBullet\src\render;..\..\..\addons\ofxBullet\src\shapes;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision\BroadphaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision\CollisionDispatch;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision\CollisionShapes;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision\Gimpact;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletCollision\NarrowPhaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\Character;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\ConstraintSolver;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\Dynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\Featherstone;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\MLCPSolvers;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletDynamics\Vehicle;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\BulletSoftBody;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\LinearMath;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\vectormath;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\vectormath\;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\vectormath\scalar;..\..\..\addons\ofxBullet\libs\bullet2.8.2\include\vectormath\sse;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxFft\libs;..\..\..\addons\ofxFft\src;..\..\..\addons\ofxFft\libs\fftw;..\..\..\addons\ofxFft\libs\fftw\include;..\..\..\addons\ofxFft\libs\fftw\lib;..\..\..\addons\ofxFft\libs\fftw\lib\win32;..\..\..\addons\ofxFft\libs\kiss</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies);assimp.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);assimp.lib;avcodec.lib;avformat.lib;avutil.lib;swresample.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxBullet\libs\bullet2.8.2\lib\win\vs;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;ffmpeg\ffmpeg-win32-dev\lib</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,7 +91,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\bahn.cpp" />
+    <ClCompile Include="src\BlueShip.cpp" />
+    <ClCompile Include="src\CyanShip.cpp" />
+    <ClCompile Include="src\ffmpeg.cpp" />
+    <ClCompile Include="src\GreenShip.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\note.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp" />
@@ -101,9 +108,20 @@
     <ClCompile Include="..\..\..\addons\ofxFft\src\ofxFftw.cpp" />
     <ClCompile Include="..\..\..\addons\ofxFft\libs\kiss\kiss_fft.c" />
     <ClCompile Include="..\..\..\addons\ofxFft\libs\kiss\kiss_fftr.c" />
+    <ClCompile Include="src\ofxGrabCam.cpp" />
+    <ClCompile Include="src\Projectile.cpp" />
+    <ClCompile Include="src\PurpleShip.cpp" />
+    <ClCompile Include="src\RedShip.cpp" />
     <ClCompile Include="src\ship.cpp" />
+    <ClCompile Include="src\YellowShip.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\bahn.h" />
+    <ClInclude Include="src\BlueShip.h" />
+    <ClInclude Include="src\CyanShip.h" />
+    <ClInclude Include="src\ffmpeg.h" />
+    <ClInclude Include="src\GreenShip.h" />
+    <ClInclude Include="src\note.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
@@ -148,7 +166,12 @@
     <ClInclude Include="..\..\..\addons\ofxFft\libs\kiss\kiss_fft.h" />
     <ClInclude Include="..\..\..\addons\ofxFft\libs\kiss\kiss_fftr.h" />
     <ClInclude Include="..\..\..\addons\ofxFft\libs\kiss\_kiss_fft_guts.h" />
+    <ClInclude Include="src\ofxGrabCam.h" />
+    <ClInclude Include="src\Projectile.h" />
+    <ClInclude Include="src\PurpleShip.h" />
+    <ClInclude Include="src\RedShip.h" />
     <ClInclude Include="src\ship.h" />
+    <ClInclude Include="src\YellowShip.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

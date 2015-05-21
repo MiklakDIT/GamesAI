@@ -37,6 +37,39 @@
     <ClCompile Include="src\ship.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\RedShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BlueShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CyanShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GreenShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PurpleShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\YellowShip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGrabCam.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ffmpeg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\note.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bahn.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Projectile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -216,6 +249,39 @@
       <Filter>addons\ofxFft\libs\kiss</Filter>
     </ClInclude>
     <ClInclude Include="src\ship.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RedShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\YellowShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BlueShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CyanShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GreenShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PurpleShip.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGrabCam.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ffmpeg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\note.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bahn.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Projectile.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
